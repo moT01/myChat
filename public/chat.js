@@ -4,8 +4,8 @@ var socket = io.connect('http://localhost:3000'); //local
 
 //query DOM
 var message = document.getElementById('message'),
-	handle = document.getElementById('handle')
-	btn = document.getElementById('send')
+	handle = document.getElementById('handle'),
+	btn = document.getElementById('send'),
 	output = document.getElementById('output'),
 	feedback = document.getElementById('feedback');
 	

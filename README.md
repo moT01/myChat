@@ -1,8 +1,8 @@
-Chat App
+##### Chat App
 
-Check it out [here](https://my-chat.glitch.me/)
+## Check it out [here](https://my-chat.glitch.me/)
 
-Technologies used
+## Technologies used
 - Node
 - Express
 - Sockets.io

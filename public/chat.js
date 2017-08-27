@@ -71,10 +71,9 @@ socket.on('connected', function(id, userName) {
 	output.innerHTML += '<p>' + userName + ' has connected</p>';	
 });
 
-socket.on('disconnected', function(userInfo) {
-	//remove(id) from chatters	
-	if(userInfo.userName) {
-		output.innerHTML += '<p>' + userInfo.userName + ' has disconnected</p>';
+socket.on('disconnected', function(id, userName) {
+	if(userName) {
+		output.innerHTML += '<p>' + userName + ' has disconnected</p>';
 	}
 });
 

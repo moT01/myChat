@@ -1,11 +1,18 @@
 * {
 	margin: 0; }
+	
+body {
+	font-size: 10px;
+	background-image: linear-gradient(to right, #666, #fff); }
 
 .inline {
 	display: inline-block; }
 	
 .block {
 	display: block; }	
+	
+.center {
+	text-align: center; }	
 
 /******Landing screen******/
 .overlay {
@@ -33,6 +40,8 @@
 	width: 100%; }
 
 #title {
+	font-size: 20px;
+	margin: 10px 0;
 	color: #999; }
 
 #handle-submit {
@@ -41,23 +50,46 @@
 
 
 
+/******logo******/
+#myChat {
+	font-size: 20px;
+	margin: 10px; }
+/*^^^^^logo^^^^^*/	
+	
+	
 
 /******Chat screen******/
 #wrap-all {}
 
 #output {
-	display: inline-block;
-	background-color: #999; }
+	margin-left: 10px;
+	color: #fff; }
 	
 #chat-area {
 	float: left;
-	background-color: pink;
 	width: 80%; 
-	min-height: 500px; }
+	min-height: 85vh; }
 	
 #chatters {
-	width: 20%;
-	min-height: 500px;
-	background-color: #444; }
+	text-align: right;
+	color: #666;
+	width: 15%;
+	min-height: 85vh; }
 	
-/*^^^^^Chat screen^^^^^*/
+.chatter {}
+/*^^^^^chat screen^^^^^*/
+
+
+
+/******chat controls******/
+#controls {
+	margin-bottom: 10px; }
+	
+#message {
+width: 80%; }
+
+#sendBtn {
+width: 15% }
+/*^^^^^chat controls^^^^^*/
+
+

@@ -10,14 +10,36 @@
 
 <body>
 
-	<div id="myChat">
-		<div id="chatWindow">
-			<div id="output"></div>	
-			<div id="feedback"></div>
+	<!------landing screen------>
+	<div class="overlay" id="ol1"></div>
+	<div class="overlay" id="ol2">
+		<div>
+			<div id="title">welcome to myChat</div>
+			
+			<div id="handle-submit">
+				<input id="handle" type="text" placeholder="handle" />
+				<button id="submit">submit</button>
+			</div>
 		</div>
-		<input id="handle" type="text" placeholder="handle" />
-		<input id="message" type="text" placeholder="message" />
-		<button id="send">send</button>	
+	</div>
+	
+	<!------main app------>
+	<div id="myChat">myChat</div>
+
+	<div id="wrap-all">
+		<div class="inline" id="chat-area">
+			<div>
+				<div id="output"></div>	
+				<div id="feedback"></div>
+			</div>	
+		</div>
+
+		<div class="inline" id="chatters"></div>
+
+		<div>
+			<input id="message" type="text" placeholder="message" />
+			<button id="sendBtn">send</button>
+		</div>
 	</div>
 	
 	<script type="text/javascript" src="chat.js"></script>

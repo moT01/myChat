@@ -13,23 +13,36 @@ var ol1 = document.getElementById('ol1'),
 	output = document.getElementById('output'),
 	feedback = document.getElementById('feedback');
 
-
-////////////emit events to server////////////
-submitBtn.addEventListener('click', function() {
+////////////functions////////////
+function submitHandle() {
 	ol1.style.display = 'none';
 	ol2.style.display = 'none';
 	
 	socket.emit('connected', {
 		handle: handle.value
 	});
-});
+}
 
-sendBtn.addEventListener('click', function() {
+function sendMessage() {
 	socket.emit('chat', {
 		message: message.value,
 		handle: handle.value	
 	});
 	message.value = "";
+}
+
+////////////emit events to server////////////
+submitBtn.addEventListener('click', submitHandle);
+handle.addEventListener('keyup', function(e) {
+	if(e.keyCode === 13) {
+		submitHandle(); }
+});
+
+sendBtn.addEventListener('click', sendMessage);
+message.addEventListener('keyup', function(e) {
+	console.log(e);	
+	if(e.keyCode === 13) {
+		sendMessage(); }
 });
 
 message.addEventListener('keyup', function() {
@@ -38,6 +51,7 @@ message.addEventListener('keyup', function() {
 		message: message.value
 	});
 });
+
 
 ////////////listen for events from sockets.io////////////
 socket.on('updateChatters', function(connectedUsers) {
@@ -54,13 +68,13 @@ socket.on('updateChatters', function(connectedUsers) {
 
 
 socket.on('connected', function(id, userName) {
-	output.innerHTML += '<p>' + userName + ' has connected, ' + id + '</p>';	
+	output.innerHTML += '<p>' + userName + ' has connected</p>';	
 });
 
 socket.on('disconnected', function(userInfo) {
 	//remove(id) from chatters	
 	if(userInfo.userName) {
-		output.innerHTML += '<p>' + userInfo.userName + ' has disconnected, ' + userInfo.id + '</p>';
+		output.innerHTML += '<p>' + userInfo.userName + ' has disconnected</p>';
 	}
 });
 

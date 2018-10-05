@@ -4,6 +4,7 @@
 <br>
 
 ###### Chat room using sockets
+###### Open multiple tabs to test it
 
 <br>
 

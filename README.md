@@ -1,9 +1,9 @@
 ## myChat
-#### Check it out [here](https://my-chat.glitch.me/)
+##### Check it out [here](https://my-chat.glitch.me/)
 
 <br>
 
-##### Chat room using sockets
+###### Chat room using sockets
 
 <br>
 
